@@ -1,0 +1,10 @@
+okta.Feature End_User_Settings_version_2_0@ssssv {
+  type = "self-service"
+  status = "DISABLED"
+  name = "End User Settings version 2.0"
+  description = "Customers are able to update their Account Settings easily with or without logging into the End User Dashboard. End User Settings will be available as its own application that is accessible from End User Dashboard with accessibility and UX improvements."
+  stage = {
+    value = "EA"
+  }
+  _alias = "End User Settings version 2.0"
+}
