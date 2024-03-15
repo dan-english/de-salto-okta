@@ -1,0 +1,8 @@
+okta.ApplicationGroupAssignment Zendesk__SRD___Support_sbs@uuuuum {
+  id = okta.Group.instance.SRD___Support@sbs
+  priority = 4
+  _parent = [
+    okta.Application.instance.Zendesk,
+  ]
+  _alias = "Zendesk : SRD - Support"
+}

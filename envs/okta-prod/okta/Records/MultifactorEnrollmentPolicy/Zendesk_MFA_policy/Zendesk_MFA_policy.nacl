@@ -1,0 +1,53 @@
+okta.MultifactorEnrollmentPolicy Zendesk_MFA_policy@s {
+  status = "ACTIVE"
+  name = "Zendesk MFA policy"
+  description = "MFA policy for Zendesk users"
+  priority = 1
+  system = false
+  conditions = {
+    people = {
+      groups = {
+        include = [
+          okta.Group.instance.Zendesk_users@s,
+        ]
+      }
+    }
+  }
+  settings = {
+    type = "AUTHENTICATORS"
+    authenticators = [
+      {
+        key = okta.Authenticator.instance.Email
+        enroll = {
+          self = "OPTIONAL"
+        }
+      },
+      {
+        key = okta.Authenticator.instance.Google_Authenticator@s
+        enroll = {
+          self = "NOT_ALLOWED"
+        }
+      },
+      {
+        key = okta.Authenticator.instance.Okta_Verify@s
+        enroll = {
+          self = "REQUIRED"
+        }
+      },
+      {
+        key = okta.Authenticator.instance.Password
+        enroll = {
+          self = "REQUIRED"
+        }
+      },
+      {
+        key = okta.Authenticator.instance.Security_Question@s
+        enroll = {
+          self = "OPTIONAL"
+        }
+      },
+    ]
+  }
+  type = "MFA_ENROLL"
+  _alias = "Zendesk MFA policy"
+}

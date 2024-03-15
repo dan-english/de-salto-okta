@@ -1,0 +1,92 @@
+okta.AccessPolicyRule SRD___Access_policy_sbss__SRD___Support_access@uuuumuusbss {
+  status = "ACTIVE"
+  name = "SRD - Support access"
+  priority = 0
+  system = false
+  conditions = {
+    people = {
+      groups = {
+        include = [
+          okta.Group.instance.SRD___Support@sbs,
+        ]
+      }
+    }
+    network = {
+      connection = "ZONE"
+      include = [
+        "ALL_ZONES",
+      ]
+    }
+    device = {
+      registered = true
+      managed = true
+    }
+    platform = {
+      include = [
+        {
+          type = "MOBILE"
+          os = {
+            type = "IOS"
+          }
+        },
+        {
+          type = "MOBILE"
+          os = {
+            type = "ANDROID"
+          }
+        },
+        {
+          type = "DESKTOP"
+          os = {
+            type = "CHROMEOS"
+          }
+        },
+        {
+          type = "DESKTOP"
+          os = {
+            type = "MACOS"
+          }
+        },
+        {
+          type = "MOBILE"
+          os = {
+            type = "OTHER"
+            expression = ""
+          }
+        },
+      ]
+    }
+    riskScore = {
+      level = "ANY"
+    }
+  }
+  actions = {
+    appSignOn = {
+      access = "ALLOW"
+      verificationMethod = {
+        factorMode = "2FA"
+        type = "ASSURANCE"
+        reauthenticateIn = "PT2H"
+        constraints = [
+          {
+            knowledge = {
+              types = [
+                "password",
+              ]
+              reauthenticateIn = "PT2H"
+            }
+            possession = {
+              hardwareProtection = "REQUIRED"
+              deviceBound = "REQUIRED"
+            }
+          },
+        ]
+      }
+    }
+  }
+  type = "ACCESS_POLICY"
+  _parent = [
+    okta.AccessPolicy.instance.SRD___Access_policy@sbss,
+  ]
+  _alias = "SRD - Support access"
+}

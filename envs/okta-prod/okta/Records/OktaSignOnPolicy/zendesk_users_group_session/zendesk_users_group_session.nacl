@@ -1,0 +1,17 @@
+okta.OktaSignOnPolicy zendesk_users_group_session@s {
+  status = "ACTIVE"
+  name = "zendesk users group session"
+  priority = 1
+  system = false
+  conditions = {
+    people = {
+      groups = {
+        include = [
+          okta.Group.instance.Zendesk_users@s,
+        ]
+      }
+    }
+  }
+  type = "OKTA_SIGN_ON"
+  _alias = "zendesk users group session"
+}

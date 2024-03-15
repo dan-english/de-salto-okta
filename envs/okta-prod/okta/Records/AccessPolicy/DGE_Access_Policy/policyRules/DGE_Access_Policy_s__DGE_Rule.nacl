@@ -1,0 +1,51 @@
+okta.AccessPolicyRule DGE_Access_Policy_s__DGE_Rule@uumuus {
+  status = "ACTIVE"
+  name = "DGE Rule"
+  priority = 0
+  system = false
+  conditions = {
+    network = {
+      connection = "ANYWHERE"
+    }
+    riskScore = {
+      level = "ANY"
+    }
+    userType = {
+      include = [
+        okta.UserType.instance.user,
+      ]
+      exclude = [
+        okta.UserType.instance.DP_User_Type,
+        okta.UserType.instance.gwr_user_type,
+      ]
+    }
+  }
+  actions = {
+    appSignOn = {
+      access = "ALLOW"
+      verificationMethod = {
+        factorMode = "2FA"
+        type = "ASSURANCE"
+        reauthenticateIn = "PT43800H"
+        constraints = [
+          {
+            knowledge = {
+              types = [
+                "password",
+              ]
+              reauthenticateIn = "PT2H"
+            }
+            possession = {
+              deviceBound = "REQUIRED"
+            }
+          },
+        ]
+      }
+    }
+  }
+  type = "ACCESS_POLICY"
+  _parent = [
+    okta.AccessPolicy.instance.DGE_Access_Policy@s,
+  ]
+  _alias = "DGE Rule"
+}

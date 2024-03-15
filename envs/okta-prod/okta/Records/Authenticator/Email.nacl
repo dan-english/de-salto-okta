@@ -4,7 +4,7 @@ okta.Authenticator Email {
   status = "ACTIVE"
   name = "Email"
   settings = {
-    allowedFor = "any"
+    allowedFor = "recovery"
     tokenLifetimeInMinutes = 5
   }
   _alias = "Email"

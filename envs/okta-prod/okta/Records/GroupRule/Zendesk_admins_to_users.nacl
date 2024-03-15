@@ -1,0 +1,20 @@
+okta.GroupRule Zendesk_admins_to_users@s {
+  type = "group_rule"
+  status = "ACTIVE"
+  name = "Zendesk admins to users"
+  conditions = {
+    expression = {
+      value = "isMemberOfAnyGroup(${ okta.Group.instance.Zendesk_Admins@s })"
+      type = "urn:okta:expression:1.0"
+    }
+  }
+  actions = {
+    assignUserToGroups = {
+      groupIds = [
+        okta.Group.instance.Zendesk_users@s,
+      ]
+    }
+  }
+  allGroupsValid = true
+  _alias = "Zendesk admins to users"
+}

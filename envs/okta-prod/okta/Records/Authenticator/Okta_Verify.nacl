@@ -1,7 +1,7 @@
 okta.Authenticator Okta_Verify@s {
   type = "app"
   key = "okta_verify"
-  status = "INACTIVE"
+  status = "ACTIVE"
   name = "Okta Verify"
   settings = {
     compliance = {

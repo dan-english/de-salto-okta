@@ -1,0 +1,8 @@
+okta.ApplicationGroupAssignment Salesforce_com_v__MKD_Sales2_s@umuuum {
+  id = okta.Group.instance.MKD_Sales2@s
+  priority = 0
+  _parent = [
+    okta.Application.instance.Salesforce_com@v,
+  ]
+  _alias = "Salesforce.com : MKD Sales2"
+}

@@ -41,7 +41,7 @@ okta.Application Zendesk {
       signOnMode = "SAML_2_0"
     }
   }
-  profileEnrollment = okta.ProfileEnrollmentPolicy.instance.Default_Policy@s
-  accessPolicy = okta.AccessPolicy.instance.Password_only@s
+  profileEnrollment = okta.ProfileEnrollmentPolicy.instance.SRD___Enrollment_Policy@sbss
+  accessPolicy = okta.AccessPolicy.instance.DGE_Access_Policy@s
   _alias = "Zendesk"
 }

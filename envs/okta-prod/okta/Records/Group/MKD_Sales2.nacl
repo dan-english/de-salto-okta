@@ -1,0 +1,10 @@
+okta.Group MKD_Sales2@s {
+  objectClass = [
+    "okta:user_group",
+  ]
+  type = "OKTA_GROUP"
+  profile = {
+    name = "MKD Sales2"
+  }
+  _alias = "MKD Sales2"
+}
