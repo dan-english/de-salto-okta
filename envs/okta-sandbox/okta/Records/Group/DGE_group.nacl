@@ -1,0 +1,11 @@
+okta.Group DGE_group@s {
+  objectClass = [
+    "okta:user_group",
+  ]
+  type = "OKTA_GROUP"
+  profile = {
+    name = "DGE group"
+    description = "Dan E's group"
+  }
+  _alias = "DGE group"
+}
