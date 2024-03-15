@@ -1,0 +1,11 @@
+okta.Group Zendesk_Admins@s {
+  objectClass = [
+    "okta:user_group",
+  ]
+  type = "OKTA_GROUP"
+  profile = {
+    name = "Zendesk Admins"
+    description = "All zendesk admins"
+  }
+  _alias = "Zendesk Admins"
+}

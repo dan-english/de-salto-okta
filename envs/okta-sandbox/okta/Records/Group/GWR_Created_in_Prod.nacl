@@ -1,0 +1,11 @@
+okta.Group GWR_Created_in_Prod@s {
+  objectClass = [
+    "okta:user_group",
+  ]
+  type = "OKTA_GROUP"
+  profile = {
+    name = "GWR Created in Prod"
+    description = "back port to Dev!"
+  }
+  _alias = "GWR Created in Prod"
+}

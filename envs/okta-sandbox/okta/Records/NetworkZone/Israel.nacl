@@ -1,0 +1,14 @@
+okta.NetworkZone Israel {
+  type = "IP"
+  name = "Israel"
+  status = "ACTIVE"
+  usage = "POLICY"
+  system = false
+  gateways = [
+    {
+      type = "RANGE"
+      value = "94.188.129.0-94.188.136.255"
+    },
+  ]
+  _alias = "Israel"
+}

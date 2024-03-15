@@ -1,0 +1,8 @@
+envs {
+  envsCloud = [
+    {
+      uuid = "c46c53db-2a70-4764-8d1f-f913c9250b4b"
+      folderName = "okta-sandbox"
+    },
+  ]
+}

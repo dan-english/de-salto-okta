@@ -1,0 +1,8 @@
+okta.ApplicationGroupAssignment Zendesk__Zendesk_users_s@uuum {
+  id = okta.Group.instance.Zendesk_users@s
+  priority = 0
+  _parent = [
+    okta.Application.instance.Zendesk,
+  ]
+  _alias = "Zendesk : Zendesk users"
+}

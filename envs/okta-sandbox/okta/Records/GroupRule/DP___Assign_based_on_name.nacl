@@ -1,0 +1,20 @@
+okta.GroupRule DP___Assign_based_on_name@sbssss {
+  type = "group_rule"
+  status = "INACTIVE"
+  name = "DP - Assign based on name"
+  conditions = {
+    expression = {
+      value = "${ okta.UserSchema.instance.user.definitions.base.properties.firstName }==\"Dan\""
+      type = "urn:okta:expression:1.0"
+    }
+  }
+  actions = {
+    assignUserToGroups = {
+      groupIds = [
+        okta.Group.instance.DP_Group_1@s,
+      ]
+    }
+  }
+  allGroupsValid = true
+  _alias = "DP - Assign based on name"
+}

@@ -1,0 +1,23 @@
+okta.GroupRule Assign_to_Contractors@s {
+  type = "group_rule"
+  status = "INACTIVE"
+  name = "Assign to Contractors"
+  conditions = {
+    expression = {
+      value = '''
+(String.toLowerCase(${ okta.UserSchema.instance.user.definitions.base.properties.department }) == 'contractors' Or String.toLowerCase(${ okta.UserSchema.instance.user.definitions.base.properties.department }) == 'part time')
+AND !isMemberOfAnyGroup(${ okta.Group.instance.Employees })
+'''
+      type = "urn:okta:expression:1.0"
+    }
+  }
+  actions = {
+    assignUserToGroups = {
+      groupIds = [
+        okta.Group.instance.Contractors,
+      ]
+    }
+  }
+  allGroupsValid = true
+  _alias = "Assign to Contractors"
+}

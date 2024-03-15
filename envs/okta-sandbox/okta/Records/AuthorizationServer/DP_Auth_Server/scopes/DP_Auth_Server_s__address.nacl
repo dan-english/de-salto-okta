@@ -1,0 +1,16 @@
+okta.OAuth2Scope DP_Auth_Server_s__address@uumuu {
+  name = "address"
+  displayName = "View your address."
+  description = "This allows the app to view your address, such as: street address, city, state, and zip code."
+  system = true
+  metadataPublish = "ALL_CLIENTS"
+  consent = "IMPLICIT"
+  default = false
+  additionalProperties = {
+    optional = false
+  }
+  _parent = [
+    okta.AuthorizationServer.instance.DP_Auth_Server@s,
+  ]
+  _alias = "View your address."
+}

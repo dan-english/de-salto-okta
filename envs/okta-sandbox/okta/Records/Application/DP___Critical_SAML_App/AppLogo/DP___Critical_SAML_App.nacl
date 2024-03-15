@@ -1,0 +1,8 @@
+okta.AppLogo DP___Critical_SAML_App@sbsss {
+  fileName = "DPCriticalSAMLApp.png"
+  contentType = "png"
+  content = file("okta/AppLogo/DPCriticalSAMLApp.png")
+  _parent = [
+    okta.Application.instance.DP___Critical_SAML_App@sbsss,
+  ]
+}

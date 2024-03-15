@@ -1,0 +1,10 @@
+envs {
+  envs = [
+    {
+      name = "okta-sandbox"
+      accountToServiceName = {
+        okta = "okta"
+      }
+    },
+  ]
+}

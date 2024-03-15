@@ -1,0 +1,7 @@
+okta.AccessPolicy IL_Policy@s {
+  status = "ACTIVE"
+  name = "IL Policy"
+  system = false
+  type = "ACCESS_POLICY"
+  _alias = "IL Policy"
+}

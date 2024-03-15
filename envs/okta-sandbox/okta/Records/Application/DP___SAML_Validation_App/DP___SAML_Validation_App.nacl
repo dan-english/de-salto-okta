@@ -1,0 +1,58 @@
+okta.Application DP___SAML_Validation_App@sbsss {
+  label = "DP - SAML Validation App"
+  status = "ACTIVE"
+  accessibility = {
+    selfService = false
+  }
+  visibility = {
+    autoSubmitToolbar = false
+    hide = {
+      iOS = false
+      web = false
+    }
+  }
+  signOnMode = "SAML_2_0"
+  credentials = {
+    userNameTemplate = {
+      template = "\${source.login}"
+      type = "BUILT_IN"
+    }
+  }
+  settings = {
+    notifications = {
+      vpn = {
+        network = {
+          connection = "DISABLED"
+        }
+      }
+    }
+    manualProvisioning = false
+    implicitAssignment = false
+    signOn = {
+      signOnMode = "SAML_2_0"
+      defaultRelayState = ""
+      ssoAcsUrl = "https://sso.dputman.io"
+      idpIssuer = "http://www.okta.com/\${org.externalKey}"
+      audience = "uri:dputman"
+      recipient = "https://sso.dputman.io"
+      destination = "https://sso.dputman.io"
+      subjectNameIdTemplate = "\${user.userName}"
+      subjectNameIdFormat = "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"
+      responseSigned = true
+      assertionSigned = true
+      signatureAlgorithm = "RSA_SHA256"
+      digestAlgorithm = "SHA256"
+      honorForceAuthn = true
+      authnContextClassRef = "urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport"
+      requestCompressed = false
+      allowMultipleAcsEndpoints = false
+      samlSignedRequestEnabled = false
+      slo = {
+        enabled = false
+      }
+    }
+  }
+  profileEnrollment = okta.ProfileEnrollmentPolicy.instance.Default_Policy@s
+  accessPolicy = okta.AccessPolicy.instance.Default_Policy@s
+  _alias = "DP - SAML Validation App"
+}

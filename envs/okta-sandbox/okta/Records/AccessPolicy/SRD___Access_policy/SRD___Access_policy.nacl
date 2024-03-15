@@ -1,0 +1,7 @@
+okta.AccessPolicy SRD___Access_policy@sbss {
+  status = "ACTIVE"
+  name = "SRD - Access policy"
+  system = false
+  type = "ACCESS_POLICY"
+  _alias = "SRD - Access policy"
+}

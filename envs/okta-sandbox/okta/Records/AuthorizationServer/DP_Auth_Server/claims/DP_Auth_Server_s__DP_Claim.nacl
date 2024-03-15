@@ -1,0 +1,14 @@
+okta.OAuth2Claim DP_Auth_Server_s__DP_Claim@uumuuu {
+  name = "DP_Claim"
+  status = "ACTIVE"
+  claimType = "RESOURCE"
+  valueType = "GROUPS"
+  value = "DP"
+  system = false
+  alwaysIncludeInToken = true
+  group_filter_type = "STARTS_WITH"
+  _parent = [
+    okta.AuthorizationServer.instance.DP_Auth_Server@s,
+  ]
+  _alias = "DP_Claim"
+}

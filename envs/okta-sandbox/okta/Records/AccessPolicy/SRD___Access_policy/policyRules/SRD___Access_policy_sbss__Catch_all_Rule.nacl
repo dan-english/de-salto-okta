@@ -1,0 +1,28 @@
+okta.AccessPolicyRule SRD___Access_policy_sbss__Catch_all_Rule@uuuumuubs {
+  status = "ACTIVE"
+  name = "Catch-all Rule"
+  priority = 99
+  system = true
+  actions = {
+    appSignOn = {
+      access = "ALLOW"
+      verificationMethod = {
+        factorMode = "2FA"
+        type = "ASSURANCE"
+        reauthenticateIn = "PT12H"
+        constraints = [
+          {
+            possession = {
+              deviceBound = "REQUIRED"
+            }
+          },
+        ]
+      }
+    }
+  }
+  type = "ACCESS_POLICY"
+  _parent = [
+    okta.AccessPolicy.instance.SRD___Access_policy@sbss,
+  ]
+  _alias = "Catch-all Rule"
+}

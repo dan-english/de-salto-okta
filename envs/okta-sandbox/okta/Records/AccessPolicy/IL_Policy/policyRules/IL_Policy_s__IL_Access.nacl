@@ -1,0 +1,45 @@
+okta.AccessPolicyRule IL_Policy_s__IL_Access@umuus {
+  status = "ACTIVE"
+  name = "IL Access"
+  priority = 0
+  system = false
+  conditions = {
+    network = {
+      connection = "ZONE"
+      include = [
+        okta.NetworkZone.instance.Israel,
+      ]
+    }
+    riskScore = {
+      level = "ANY"
+    }
+  }
+  actions = {
+    appSignOn = {
+      access = "ALLOW"
+      verificationMethod = {
+        factorMode = "2FA"
+        type = "ASSURANCE"
+        reauthenticateIn = "PT0S"
+        constraints = [
+          {
+            knowledge = {
+              types = [
+                "password",
+              ]
+              reauthenticateIn = "PT0S"
+            }
+            possession = {
+              deviceBound = "REQUIRED"
+            }
+          },
+        ]
+      }
+    }
+  }
+  type = "ACCESS_POLICY"
+  _parent = [
+    okta.AccessPolicy.instance.IL_Policy@s,
+  ]
+  _alias = "IL Access"
+}

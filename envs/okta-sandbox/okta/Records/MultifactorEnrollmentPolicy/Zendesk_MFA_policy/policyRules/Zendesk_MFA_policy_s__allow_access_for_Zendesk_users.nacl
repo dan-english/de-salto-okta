@@ -1,0 +1,21 @@
+okta.MultifactorEnrollmentPolicyRule Zendesk_MFA_policy_s__allow_access_for_Zendesk_users@uumuussss {
+  status = "ACTIVE"
+  name = "allow access for Zendesk users"
+  priority = 1
+  system = false
+  conditions = {
+    network = {
+      connection = "ANYWHERE"
+    }
+  }
+  actions = {
+    enroll = {
+      self = "CHALLENGE"
+    }
+  }
+  type = "MFA_ENROLL"
+  _parent = [
+    okta.MultifactorEnrollmentPolicy.instance.Zendesk_MFA_policy@s,
+  ]
+  _alias = "allow access for Zendesk users"
+}

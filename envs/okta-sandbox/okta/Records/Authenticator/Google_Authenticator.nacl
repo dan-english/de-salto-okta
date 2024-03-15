@@ -1,0 +1,7 @@
+okta.Authenticator Google_Authenticator@s {
+  type = "app"
+  key = "google_otp"
+  status = "ACTIVE"
+  name = "Google Authenticator"
+  _alias = "Google Authenticator"
+}

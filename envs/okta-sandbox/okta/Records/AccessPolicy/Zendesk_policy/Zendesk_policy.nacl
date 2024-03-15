@@ -1,0 +1,8 @@
+okta.AccessPolicy Zendesk_policy@s {
+  status = "ACTIVE"
+  name = "Zendesk policy"
+  description = "limit Zendesk sign-on"
+  system = false
+  type = "ACCESS_POLICY"
+  _alias = "Zendesk policy"
+}

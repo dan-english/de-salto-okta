@@ -1,0 +1,17 @@
+okta.OAuth2Claim DP_Auth_Server_s__family_name@uumuuu {
+  name = "family_name"
+  status = "ACTIVE"
+  claimType = "IDENTITY"
+  valueType = "SYSTEM"
+  conditions = {
+    scopes = [
+      "profile",
+    ]
+  }
+  system = true
+  alwaysIncludeInToken = false
+  _parent = [
+    okta.AuthorizationServer.instance.DP_Auth_Server@s,
+  ]
+  _alias = "family_name"
+}

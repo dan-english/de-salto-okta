@@ -1,0 +1,17 @@
+okta.OAuth2Claim DP_Auth_Server_s__preferred_username@uumuuu {
+  name = "preferred_username"
+  status = "ACTIVE"
+  claimType = "IDENTITY"
+  valueType = "SYSTEM"
+  conditions = {
+    scopes = [
+      "profile",
+    ]
+  }
+  system = true
+  alwaysIncludeInToken = true
+  _parent = [
+    okta.AuthorizationServer.instance.DP_Auth_Server@s,
+  ]
+  _alias = "preferred_username"
+}

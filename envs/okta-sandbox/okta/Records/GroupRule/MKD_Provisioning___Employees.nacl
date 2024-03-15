@@ -1,0 +1,22 @@
+okta.GroupRule MKD_Provisioning___Employees@ssbs {
+  type = "group_rule"
+  status = "INACTIVE"
+  name = "MKD Provisioning - Employees"
+  conditions = {
+    expression = {
+      value = "(String.toLowerCase(${ okta.UserSchema.instance.user.definitions.base.properties.department }) != 'contractors' AND String.toLowerCase(${ okta.UserSchema.instance.user.definitions.base.properties.department }) != 'part time') AND !isMemberOfAnyGroup(${ okta.Group.instance.MKD_Contractors@s })"
+      type = "urn:okta:expression:1.0"
+    }
+  }
+  actions = {
+    assignUserToGroups = {
+      groupIds = [
+        okta.Group.instance.MKD_Employees@s,
+        okta.Group.instance.MKD_Sales2@s,
+        okta.Group.instance.MKD_Support@s,
+      ]
+    }
+  }
+  allGroupsValid = true
+  _alias = "MKD Provisioning - Employees"
+}

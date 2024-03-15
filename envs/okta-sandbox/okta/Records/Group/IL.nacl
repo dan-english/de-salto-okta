@@ -1,0 +1,10 @@
+okta.Group IL {
+  objectClass = [
+    "okta:user_group",
+  ]
+  type = "OKTA_GROUP"
+  profile = {
+    name = "IL"
+  }
+  _alias = "IL"
+}

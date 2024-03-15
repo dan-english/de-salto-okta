@@ -1,0 +1,49 @@
+okta.AccessPolicyRule Zendesk_policy_s__High_risk_Zendesk_authentications@umuusss {
+  status = "ACTIVE"
+  name = "High risk Zendesk authentications"
+  priority = 0
+  system = false
+  conditions = {
+    people = {
+      groups = {
+        include = [
+          okta.Group.instance.Zendesk_users@s,
+        ]
+        exclude = [
+          okta.Group.instance.Zendesk_Admins@s,
+        ]
+      }
+    }
+    network = {
+      connection = "ZONE"
+      exclude = [
+        okta.NetworkZone.instance.high_risk_zones@s,
+      ]
+    }
+    riskScore = {
+      level = "HIGH"
+    }
+  }
+  actions = {
+    appSignOn = {
+      access = "ALLOW"
+      verificationMethod = {
+        factorMode = "2FA"
+        type = "ASSURANCE"
+        reauthenticateIn = "PT0S"
+        constraints = [
+          {
+            possession = {
+              deviceBound = "REQUIRED"
+            }
+          },
+        ]
+      }
+    }
+  }
+  type = "ACCESS_POLICY"
+  _parent = [
+    okta.AccessPolicy.instance.Zendesk_policy@s,
+  ]
+  _alias = "High risk Zendesk authentications"
+}

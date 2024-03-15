@@ -1,0 +1,11 @@
+okta.AccessPolicy Test_access_policy@s {
+  status = "ACTIVE"
+  name = "Test access policy"
+  description = '''
+test
+
+'''
+  system = false
+  type = "ACCESS_POLICY"
+  _alias = "Test access policy"
+}

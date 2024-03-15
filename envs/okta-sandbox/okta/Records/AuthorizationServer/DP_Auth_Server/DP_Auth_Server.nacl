@@ -1,0 +1,59 @@
+okta.AuthorizationServer DP_Auth_Server@s {
+  name = "DP Auth Server"
+  description = "For Demos"
+  audiences = [
+    "CE's",
+  ]
+  issuerMode = "DYNAMIC"
+  status = "ACTIVE"
+  credentials = {
+    signing = {
+      rotationMode = "AUTO"
+    }
+  }
+  default = false
+  scopes = [
+    okta.OAuth2Scope.instance.DP_Auth_Server_s__okta_myAccount_appAuthenticator_maintenance_manage@uumuuvvvv,
+    okta.OAuth2Scope.instance.DP_Auth_Server_s__okta_myAccount_appAuthenticator_maintenance_read@uumuuvvvv,
+    okta.OAuth2Scope.instance.DP_Auth_Server_s__okta_myAccount_appAuthenticator_manage@uumuuvvv,
+    okta.OAuth2Scope.instance.DP_Auth_Server_s__okta_myAccount_appAuthenticator_read@uumuuvvv,
+    okta.OAuth2Scope.instance.DP_Auth_Server_s__okta_myAccount_email_manage@uumuuvvv,
+    okta.OAuth2Scope.instance.DP_Auth_Server_s__okta_myAccount_email_read@uumuuvvv,
+    okta.OAuth2Scope.instance.DP_Auth_Server_s__okta_myAccount_manage@uumuuvv,
+    okta.OAuth2Scope.instance.DP_Auth_Server_s__okta_myAccount_phone_manage@uumuuvvv,
+    okta.OAuth2Scope.instance.DP_Auth_Server_s__okta_myAccount_phone_read@uumuuvvv,
+    okta.OAuth2Scope.instance.DP_Auth_Server_s__okta_myAccount_profile_manage@uumuuvvv,
+    okta.OAuth2Scope.instance.DP_Auth_Server_s__okta_myAccount_profile_read@uumuuvvv,
+    okta.OAuth2Scope.instance.DP_Auth_Server_s__okta_myAccount_read@uumuuvv,
+    okta.OAuth2Scope.instance.DP_Auth_Server_s__openid@uumuu,
+    okta.OAuth2Scope.instance.DP_Auth_Server_s__profile@uumuu,
+    okta.OAuth2Scope.instance.DP_Auth_Server_s__email@uumuu,
+    okta.OAuth2Scope.instance.DP_Auth_Server_s__address@uumuu,
+    okta.OAuth2Scope.instance.DP_Auth_Server_s__phone@uumuu,
+    okta.OAuth2Scope.instance.DP_Auth_Server_s__offline_access@uumuuu,
+    okta.OAuth2Scope.instance.DP_Auth_Server_s__device_sso@uumuuu,
+  ]
+  claims = [
+    okta.OAuth2Claim.instance.DP_Auth_Server_s__address@uumuu,
+    okta.OAuth2Claim.instance.DP_Auth_Server_s__zoneinfo@uumuu,
+    okta.OAuth2Claim.instance.DP_Auth_Server_s__website@uumuu,
+    okta.OAuth2Claim.instance.DP_Auth_Server_s__updated_at@uumuuu,
+    okta.OAuth2Claim.instance.DP_Auth_Server_s__profile@uumuu,
+    okta.OAuth2Claim.instance.DP_Auth_Server_s__preferred_username@uumuuu,
+    okta.OAuth2Claim.instance.DP_Auth_Server_s__picture@uumuu,
+    okta.OAuth2Claim.instance.DP_Auth_Server_s__phone_number@uumuuu,
+    okta.OAuth2Claim.instance.DP_Auth_Server_s__nickname@uumuu,
+    okta.OAuth2Claim.instance.DP_Auth_Server_s__name@uumuu,
+    okta.OAuth2Claim.instance.DP_Auth_Server_s__middle_name@uumuuu,
+    okta.OAuth2Claim.instance.DP_Auth_Server_s__locale@uumuu,
+    okta.OAuth2Claim.instance.DP_Auth_Server_s__given_name@uumuuu,
+    okta.OAuth2Claim.instance.DP_Auth_Server_s__gender@uumuu,
+    okta.OAuth2Claim.instance.DP_Auth_Server_s__family_name@uumuuu,
+    okta.OAuth2Claim.instance.DP_Auth_Server_s__email_verified@uumuuu,
+    okta.OAuth2Claim.instance.DP_Auth_Server_s__email@uumuu,
+    okta.OAuth2Claim.instance.DP_Auth_Server_s__birthdate@uumuu,
+    okta.OAuth2Claim.instance.DP_Auth_Server_s__sub@uumuu,
+    okta.OAuth2Claim.instance.DP_Auth_Server_s__DP_Claim@uumuuu,
+  ]
+  _alias = "DP Auth Server"
+}

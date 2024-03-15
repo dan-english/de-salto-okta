@@ -1,0 +1,8 @@
+okta.ApplicationGroupAssignment Zendesk__HB_Customer_Engineers_s@uuuum {
+  id = okta.Group.instance.HB_Customer_Engineers@s
+  priority = 3
+  _parent = [
+    okta.Application.instance.Zendesk,
+  ]
+  _alias = "Zendesk : HB Customer Engineers"
+}

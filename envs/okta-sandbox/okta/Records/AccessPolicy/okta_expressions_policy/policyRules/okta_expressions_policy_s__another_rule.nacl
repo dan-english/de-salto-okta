@@ -1,0 +1,45 @@
+okta.AccessPolicyRule okta_expressions_policy_s__another_rule@uumuus {
+  status = "ACTIVE"
+  name = "another rule"
+  priority = 1
+  system = false
+  conditions = {
+    network = {
+      connection = "ANYWHERE"
+    }
+    riskScore = {
+      level = "LOW"
+    }
+    elCondition = {
+      condition = "security.behaviors.contains(${ okta.BehaviorRule.instance.New_IP@s }) || security.behaviors.contains(${ okta.BehaviorRule.instance.custom_behavior@s }) || security.behaviors.contains(\"User in country\")"
+    }
+  }
+  actions = {
+    appSignOn = {
+      access = "ALLOW"
+      verificationMethod = {
+        factorMode = "2FA"
+        type = "ASSURANCE"
+        reauthenticateIn = "PT2H"
+        constraints = [
+          {
+            knowledge = {
+              types = [
+                "password",
+              ]
+              reauthenticateIn = "PT3H"
+            }
+            possession = {
+              deviceBound = "REQUIRED"
+            }
+          },
+        ]
+      }
+    }
+  }
+  type = "ACCESS_POLICY"
+  _parent = [
+    okta.AccessPolicy.instance.okta_expressions_policy@s,
+  ]
+  _alias = "another rule"
+}

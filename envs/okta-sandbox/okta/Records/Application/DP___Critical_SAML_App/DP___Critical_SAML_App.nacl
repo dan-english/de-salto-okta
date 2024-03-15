@@ -1,0 +1,58 @@
+okta.Application DP___Critical_SAML_App@sbsss {
+  label = "DP - Critical SAML App"
+  status = "ACTIVE"
+  accessibility = {
+    selfService = false
+  }
+  visibility = {
+    autoSubmitToolbar = false
+    hide = {
+      iOS = false
+      web = false
+    }
+  }
+  signOnMode = "SAML_2_0"
+  credentials = {
+    userNameTemplate = {
+      template = "\${source.login}"
+      type = "BUILT_IN"
+    }
+  }
+  settings = {
+    notifications = {
+      vpn = {
+        network = {
+          connection = "DISABLED"
+        }
+      }
+    }
+    manualProvisioning = false
+    implicitAssignment = false
+    signOn = {
+      signOnMode = "SAML_2_0"
+      defaultRelayState = ""
+      ssoAcsUrl = "https://putman.io"
+      idpIssuer = "http://www.okta.com/\${org.externalKey}"
+      audience = "putmanio"
+      recipient = "https://putman.io"
+      destination = "https://putman.io"
+      subjectNameIdTemplate = "\${user.userName}"
+      subjectNameIdFormat = "urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress"
+      responseSigned = true
+      assertionSigned = true
+      signatureAlgorithm = "RSA_SHA256"
+      digestAlgorithm = "SHA256"
+      honorForceAuthn = true
+      authnContextClassRef = "urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport"
+      requestCompressed = false
+      allowMultipleAcsEndpoints = false
+      samlSignedRequestEnabled = false
+      slo = {
+        enabled = false
+      }
+    }
+  }
+  profileEnrollment = okta.ProfileEnrollmentPolicy.instance.Default_Policy@s
+  accessPolicy = okta.AccessPolicy.instance.DP_Access_Policy@s
+  _alias = "DP - Critical SAML App"
+}

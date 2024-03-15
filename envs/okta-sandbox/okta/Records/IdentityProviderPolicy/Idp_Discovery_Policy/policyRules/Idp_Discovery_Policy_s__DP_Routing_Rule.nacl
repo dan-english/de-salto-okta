@@ -1,0 +1,35 @@
+okta.IdentityProviderPolicyRule Idp_Discovery_Policy_s__DP_Routing_Rule@uumuuss {
+  status = "INACTIVE"
+  name = "DP Routing Rule"
+  priority = 1
+  system = false
+  conditions = {
+    network = {
+      connection = "ANYWHERE"
+    }
+    platform = {
+      include = [
+        {
+          type = "ANY"
+          os = {
+            type = "ANY"
+          }
+        },
+      ]
+    }
+  }
+  actions = {
+    idp = {
+      providers = [
+        {
+          type = "OKTA"
+        },
+      ]
+    }
+  }
+  type = "IDP_DISCOVERY"
+  _parent = [
+    okta.IdentityProviderPolicy.instance.Idp_Discovery_Policy@s,
+  ]
+  _alias = "DP Routing Rule"
+}

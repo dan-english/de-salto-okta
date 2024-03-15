@@ -1,0 +1,17 @@
+okta.OAuth2Claim DP_Auth_Server_s__email_verified@uumuuu {
+  name = "email_verified"
+  status = "ACTIVE"
+  claimType = "IDENTITY"
+  valueType = "SYSTEM"
+  conditions = {
+    scopes = [
+      "email",
+    ]
+  }
+  system = true
+  alwaysIncludeInToken = false
+  _parent = [
+    okta.AuthorizationServer.instance.DP_Auth_Server@s,
+  ]
+  _alias = "email_verified"
+}

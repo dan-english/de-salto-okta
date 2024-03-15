@@ -1,0 +1,8 @@
+okta.ApplicationGroupAssignment Zendesk__MKD_Support_s@uuum {
+  id = okta.Group.instance.MKD_Support@s
+  priority = 1
+  _parent = [
+    okta.Application.instance.Zendesk,
+  ]
+  _alias = "Zendesk : MKD Support"
+}

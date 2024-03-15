@@ -1,0 +1,7 @@
+okta.ProfileEnrollmentPolicy new_policy@s {
+  status = "ACTIVE"
+  name = "new policy"
+  system = false
+  type = "PROFILE_ENROLLMENT"
+  _alias = "new policy"
+}

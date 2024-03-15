@@ -1,0 +1,10 @@
+okta.Group Group3 {
+  objectClass = [
+    "okta:user_group",
+  ]
+  type = "OKTA_GROUP"
+  profile = {
+    name = "Group3"
+  }
+  _alias = "Group3"
+}

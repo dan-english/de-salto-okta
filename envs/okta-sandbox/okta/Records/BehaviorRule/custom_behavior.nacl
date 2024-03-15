@@ -1,0 +1,12 @@
+okta.BehaviorRule custom_behavior@s {
+  name = "custom behavior"
+  status = "INACTIVE"
+  type = "ANOMALOUS_DEVICE"
+  additionalProperties = {
+    settings = {
+      minEventsNeededForEvaluation = 0
+      maxEventsUsedForEvaluation = 3
+    }
+  }
+  _alias = "custom behavior"
+}

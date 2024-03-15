@@ -1,0 +1,9 @@
+okta.BrandLogo unnamed_0 {
+  fileName = "unnamed0.png"
+  contentType = "png"
+  content = file("okta/BrandLogo/unnamed0.png")
+  _parent = [
+    okta.BrandTheme.instance.unnamed_0,
+    okta.Brand.instance.unnamed_0,
+  ]
+}

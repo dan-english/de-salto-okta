@@ -1,0 +1,8 @@
+okta.AppLogo HubSpot_SWA@s {
+  fileName = "HubSpotSWA.png"
+  contentType = "png"
+  content = file("okta/AppLogo/HubSpotSWA.png")
+  _parent = [
+    okta.Application.instance.HubSpot_SWA@s,
+  ]
+}

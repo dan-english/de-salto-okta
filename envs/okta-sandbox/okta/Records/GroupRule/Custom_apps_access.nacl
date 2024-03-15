@@ -1,0 +1,20 @@
+okta.GroupRule Custom_apps_access@s {
+  type = "group_rule"
+  status = "INACTIVE"
+  name = "Custom apps access"
+  conditions = {
+    expression = {
+      value = "isMemberOfAnyGroup(${ okta.Group.instance.Group1 },${ okta.Group.instance.missing_00g9ai8m4jCn5yQp35d7 },${ okta.Group.instance.Group3 }) AND !isMemberOfGroup(${ okta.Group.instance.Contractors })"
+      type = "urn:okta:expression:1.0"
+    }
+  }
+  actions = {
+    assignUserToGroups = {
+      groupIds = [
+        okta.Group.instance.Customers_apps@s,
+      ]
+    }
+  }
+  allGroupsValid = true
+  _alias = "Custom apps access"
+}

@@ -1,0 +1,8 @@
+okta.AccessPolicy okta_expressions_policy@s {
+  status = "ACTIVE"
+  name = "okta expressions policy"
+  description = "a policy that uses okta expression language"
+  system = false
+  type = "ACCESS_POLICY"
+  _alias = "okta expressions policy"
+}

@@ -1,0 +1,17 @@
+okta.OAuth2Claim DP_Auth_Server_s__updated_at@uumuuu {
+  name = "updated_at"
+  status = "ACTIVE"
+  claimType = "IDENTITY"
+  valueType = "SYSTEM"
+  conditions = {
+    scopes = [
+      "profile",
+    ]
+  }
+  system = true
+  alwaysIncludeInToken = false
+  _parent = [
+    okta.AuthorizationServer.instance.DP_Auth_Server@s,
+  ]
+  _alias = "updated_at"
+}

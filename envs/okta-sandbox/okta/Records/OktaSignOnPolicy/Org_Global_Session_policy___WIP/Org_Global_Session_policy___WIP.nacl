@@ -1,0 +1,17 @@
+okta.OktaSignOnPolicy Org_Global_Session_policy___WIP@ssssbs {
+  status = "ACTIVE"
+  name = "Org Global Session policy - WIP"
+  priority = 2
+  system = false
+  conditions = {
+    people = {
+      groups = {
+        include = [
+          okta.Group.instance.DP_Employees@s,
+        ]
+      }
+    }
+  }
+  type = "OKTA_SIGN_ON"
+  _alias = "Org Global Session policy - WIP"
+}

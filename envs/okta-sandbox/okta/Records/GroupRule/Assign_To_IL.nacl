@@ -1,0 +1,20 @@
+okta.GroupRule Assign_To_IL@s {
+  type = "group_rule"
+  status = "INACTIVE"
+  name = "Assign To IL"
+  conditions = {
+    expression = {
+      value = "${ okta.UserSchema.instance.user.definitions.base.properties.countryCode }==\"Israel\""
+      type = "urn:okta:expression:1.0"
+    }
+  }
+  actions = {
+    assignUserToGroups = {
+      groupIds = [
+        okta.Group.instance.IL,
+      ]
+    }
+  }
+  allGroupsValid = true
+  _alias = "Assign To IL"
+}
