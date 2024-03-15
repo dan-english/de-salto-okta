@@ -1,8 +1,0 @@
-okta.AccessPolicy DGE_Access_Policy@s {
-  status = "ACTIVE"
-  name = "DGE Access Policy"
-  description = "Dan E access policy"
-  system = false
-  type = "ACCESS_POLICY"
-  _alias = "DGE Access Policy"
-}
